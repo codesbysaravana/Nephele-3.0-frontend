@@ -40,7 +40,7 @@ export default function QrScanner() {
     setLoading(true);
 
     try {
-      const resp = await fetch("http://127.0.0.1:8000/voice/process_qr/", {
+      const resp = await fetch("https://nephele-wue7.onrender.com/voice/process_qr/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ qr_data: data }),
@@ -78,7 +78,7 @@ export default function QrScanner() {
     setLoading(true);
 
     try {
-      const resp = await fetch("http://127.0.0.1:8000/voice/chat/", {
+      const resp = await fetch("https://nephele-wue7.onrender.com/voice/chat/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ uid, message: userMessage }),
