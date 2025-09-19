@@ -1,0 +1,90 @@
+/* Full-screen container */
+.landing-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background image */
+.landing-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Robot container */
+.robot-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Robot image */
+.robot {
+  width: 200px;
+  height: auto;
+  position: relative;
+}
+
+/* Robot eyes */
+.robot-eyes {
+  position: absolute;
+  top: 35px; /* adjust to match robot image */
+  display: flex;
+  gap: 40px; /* space between eyes */
+}
+
+/* Single eye */
+.eye {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Eye pupil (animated blink) */
+.eye::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  animation: blink 4s infinite;
+}
+
+/* Blink animation */
+@keyframes blink {
+  0%, 90%, 100% { height: 100%; top: 0; }
+  92%, 98% { height: 0%; top: 50%; }
+}
+
+/* Landing page text */
+.landing-content {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.landing-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.landing-content p {
+  font-size: 1.5rem;
+}

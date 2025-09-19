@@ -1,0 +1,180 @@
+/* ==============================
+   TEACHING ASSISTANT - CLEAN CSS
+   Minimal Professional Theme
+   ============================== */
+
+:root {
+  --bg-dark: #0a0b0f;
+  --bg-surface: #1c2028;
+  --bg-card: rgba(28, 32, 40, 0.9);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #22c55e;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --shadow: 0 4px 12px rgba(0,0,0,0.3);
+  --transition: 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Container */
+.teaching-container {
+  min-height: 100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: var(--space-xl);
+  animation: fadeIn 0.8s var(--transition);
+}
+
+/* Card */
+.teaching-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow);
+  max-width: 900px;
+  width:100%;
+  animation: fadeIn 1s var(--transition);
+}
+.teaching-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(34,197,94,0.4);
+}
+
+/* Header */
+.teaching-header { text-align:center; margin-bottom: var(--space-lg); }
+.teaching-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  animation: pulse 4s infinite;
+}
+.teaching-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+/* Upload Section */
+.upload-section {
+  border:2px dashed rgba(255,255,255,0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align:center;
+  margin: var(--space-xl) 0;
+}
+.file-input { display:none; }
+.file-input-label {
+  display:inline-block;
+  padding: var(--space-md) var(--space-xl);
+  background: var(--accent-blue);
+  color:white;
+  border-radius: var(--radius-lg);
+  font-weight:600;
+  cursor:pointer;
+  transition: var(--transition);
+}
+.file-input-label:hover {
+  background: var(--accent-purple);
+  transform: translateY(-2px);
+}
+
+/* Button */
+.upload-button {
+  background: var(--accent);
+  color:white;
+  border:none;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-lg);
+  font-weight:700;
+  cursor:pointer;
+  transition: var(--transition);
+}
+.upload-button:hover { background: var(--accent-blue); }
+.upload-button:disabled {
+  opacity:0.5; cursor:not-allowed;
+}
+
+/* Loading */
+.loading-spinner {
+  width:20px; height:20px;
+  border:3px solid rgba(255,255,255,0.3);
+  border-top:3px solid white;
+  border-radius:50%;
+  animation: rotate 1s linear infinite;
+  margin-right: var(--space-sm);
+}
+
+/* Response */
+.response-section {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+.response-header {
+  font-size:1.5rem;
+  font-weight:700;
+  margin-bottom: var(--space-md);
+}
+
+/* Lesson Preview */
+.lesson-preview {
+  background: white;
+  color: var(--bg-dark);
+  padding: var(--space-md);
+  border-left:4px solid var(--accent);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* Audio Section */
+.audio-section {
+  background: var(--bg-surface);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  text-align:center;
+}
+.audio-label {
+  font-weight:700;
+  margin-bottom: var(--space-sm);
+}
+.custom-audio {
+  width:100%;
+  border-radius: var(--radius-md);
+}
