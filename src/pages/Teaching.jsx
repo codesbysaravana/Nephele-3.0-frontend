@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 
 // Base API URL
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://nephele-wue7.onrender.com";
 // Fallback audio path
 const FALLBACK_AUDIO = "/5ddb4214558e4bf2baa0cb0c233c5575.mp3";
 

@@ -10,7 +10,7 @@ export default function Attendance() {
       setStatus("📡 QR Detected: Sending...");
 
       try {
-        const response = await fetch("http://127.0.0.1:8000/mark-attendance", {
+        const response = await fetch("https://nephele-wue7.onrender.com/mark-attendance", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ qr_data: result.text }),
@@ -28,7 +28,7 @@ export default function Attendance() {
 
         // Play voice file if returned by backend
         if (data.voice_file) {
-          const audio = new Audio(`http://127.0.0.1:8000/voice/${data.voice_file}`);
+          const audio = new Audio(`https://nephele-wue7.onrender.com/voice/${data.voice_file}`);
           audio.play();
         }
       } catch (error) {
