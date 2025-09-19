@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/landing.css";
+import "../styles/Landing.css" 
 
 export default function Landing() {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ export default function Landing() {
     >
       {/* Background Video */}
       <video
-        src="/roboeyes.mp4" // Put your MP4 in public/videos/
+        src="/roboeyes.mp4" 
         autoPlay
         loop
         muted

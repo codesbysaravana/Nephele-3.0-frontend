@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-"scripts": {
-  "dev": "vite",
-  "build": "npm install --legacy-peer-deps && vite build",
-  "lint": "eslint .",
-  "preview": "vite preview"
-},
+  "scripts": {
+    "dev": "vite",
+    "build": "npm install --legacy-peer-deps && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
   "dependencies": {
+    "@blackbox-vision/react-qr-reader": "^5.0.0",
     "axios": "^1.12.2",
     "lamejs": "^1.2.1",
     "lucide-react": "^0.544.0",
